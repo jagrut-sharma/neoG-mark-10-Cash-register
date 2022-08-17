@@ -15,7 +15,7 @@ body{
 .input{
     display: block;
     padding: 0.5rem;
-    width: 30%;
+    width: 200px;
     margin: 0rem auto 1rem;
     text-align: center;
 }
