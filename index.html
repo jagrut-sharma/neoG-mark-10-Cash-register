@@ -8,6 +8,42 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <h1 class="title">Cash Register</h1>
+    <p class="details">Enter the bill amount and cash given by customer to know the minimum amount of notes to be returned.</p>
+    <form>
+        <label for="bill-amt" class="input-label">Bill Amount: </label><input type="text" id="bill-amt" class="input" required autofocus>
+
+        <button class="btn">Next</button>
+
+        <label for="cash-gvn" class="input-label">Cash given: </label><input type="text" id="cash-gvn" class="input" required>
+    </form>
+
+    <table class="table">
+        <caption>Change to be returned</caption>
+        <tbody>
+            <tr>
+                <th>No. of notes</th>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+            </tr>
+            <tr>
+                <th>Notes</th>
+                <td class="notes">2000</td>
+                <td class="notes">500</td>
+                <td class="notes">100</td>
+                <td class="notes">20</td>
+                <td class="notes">10</td>
+                <td class="notes">5</td>
+                <td class="notes">1   </td>
+            </tr>
+        </tbody>
+    </table>
+
     <script src="./app.js" type="text/javascript"></script>
 </body>
 </html>

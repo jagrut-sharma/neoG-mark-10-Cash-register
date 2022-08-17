@@ -1,3 +1,50 @@
 *{
     box-sizing: border-box;
 }
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+.input-label{
+    display: block;
+    padding: 1rem;
+}
+
+.input{
+    display: block;
+    padding: 0.5rem;
+    width: 30%;
+    margin: 0rem auto 1rem;
+    text-align: center;
+}
+
+.btn{
+    display: block;
+    width: max-content;
+    margin: 0.5rem auto 0;
+    padding: 0.5rem;
+}
+
+.table {
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    width: 0%;
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.table caption{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+}
