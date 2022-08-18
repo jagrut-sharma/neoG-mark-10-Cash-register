@@ -10,6 +10,10 @@ body{
     text-align: center;
 }
 
+.details{
+    margin-block-end: 0;
+}
+
 .input-label{
     display: block;
     padding: 1rem;
