@@ -47,6 +47,10 @@ body{
     padding: 0.5rem;
 }
 
+.error-img{
+    display: none;
+}
+
 .table {
     width: 50%;
     margin: auto;
