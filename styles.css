@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&display=swap');
+
 *{
     box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
 }
 
 body{
@@ -24,6 +27,15 @@ body{
     display: block;
     width: max-content;
     margin: 0.5rem auto 0;
+    padding: 0.5rem;
+}
+
+.btn-nxt{
+    display: none;
+}
+
+.error-message{
+    margin: 0;
     padding: 0.5rem;
 }
 
