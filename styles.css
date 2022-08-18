@@ -30,7 +30,11 @@ body{
     padding: 0.5rem;
 }
 
-.btn-nxt{
+/* .btn-nxt{
+    display: none;
+} */
+
+.cash-given {
     display: none;
 }
 
@@ -59,4 +63,8 @@ th, td {
     font-size: 1.5rem;
     font-weight: 600;
     padding: 1rem;
+}
+
+.table-container{
+    display: none;
 }
