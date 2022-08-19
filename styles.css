@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&display=swap');
+:root{
+    --primary-color: #7e22ce;
+}
+
 
 * {
     box-sizing: border-box;
@@ -8,6 +12,11 @@
 body {
     margin: 0;
     text-align: center;
+    background-color: #f1f5f9;
+}
+
+.title{
+    color: var(--primary-color);
 }
 
 .details {
@@ -17,6 +26,8 @@ body {
 .input-label {
     display: block;
     padding: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .input {

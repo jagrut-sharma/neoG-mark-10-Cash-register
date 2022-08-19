@@ -12,29 +12,22 @@ const enableDisplayTwo = document.querySelector(".table-container");
 
 let billTotal, cashReceived, balanceAmount;
 
-buttonNext.addEventListener("click",
-    function () {
-
-        setErrorMessage("");
-        billTotal = parseFloat(billAmount.value);
-
-        if (billTotal > 0) {
-            enableDisplayOne.style.display = "block";
-            buttonNext.style.display = "none";
-        } else {
-            setErrorMessage("Value should be greater than 0");
-            errorMessage.style.color = "red";
-        }
-    });
+buttonNext.addEventListener("click", checkBillValidity);
 
 buttonCheck.addEventListener("click",
     function () {
 
         setErrorMessage("");
         cashReceived = parseFloat(cashGiven.value);
-        billTotal = parseFloat(billAmount.value);
+        checkBillValidity();
+        console.log(cashReceived);
 
-        if (cashReceived > billTotal) {
+        // If user directly enters -ve value in bill Amount
+        if (cashReceived === 0) {
+            setErrorMessage("Value should be greater than 0");
+            errorMessage.style.color = "red";
+            enableDisplayTwo.style.display = "none";
+        } else if (cashReceived > billTotal) {
             balanceAmount = cashReceived - billTotal;
             calculateChange(balanceAmount);
         } else if (cashReceived === billTotal) {
@@ -43,9 +36,29 @@ buttonCheck.addEventListener("click",
         } else {
             enableDisplayTwo.style.display = "none";
             setErrorMessage("Ha Ha! nice one, now pay the bill or else I'll shoot you.");
-            errorImage.style.display="block";
+            errorImage.style.display = "block";
         }
     });
+
+function checkBillValidity() {
+
+    setErrorMessage("");
+    billTotal = parseFloat(billAmount.value);
+
+    if (billTotal > 0) {
+        enableDisplayOne.style.display = "block";
+        buttonNext.style.display = "none";
+    } else {
+        // Also handles if user enters -ve value directly in bill amount after next button is hidden.
+        setErrorMessage("Value should be greater than 0");
+        cashReceived = 0;
+        errorMessage.style.color = "red";
+        cashGiven.value = 0;
+        enableDisplayOne.style.display = "none";
+        buttonNext.style.display = "block";
+    }
+
+}
 
 function setErrorMessage(message) {
     errorMessage.innerText = message;
@@ -54,7 +67,7 @@ function setErrorMessage(message) {
 function calculateChange(balance) {
 
     const notesValue = [2000, 500, 100, 20, 10, 5, 1];
-    errorImage.style.display="none";
+    errorImage.style.display = "none";
     unsetColor();
     enableDisplayTwo.style.display = "block";
 
@@ -62,22 +75,24 @@ function calculateChange(balance) {
         const division = Math.trunc(balance / notesValue[i]);
         balance %= notesValue[i];
         notesNumber[i].innerText = division;
-        if (division > 0){
+        if (division > 0) {
             setColor(i);
         }
     }
 }
 
-function setColor(positionOfElement){
+// To set the color
+function setColor(positionOfElement) {
     notesNumber[positionOfElement].style.color = "#1e40af";
     notesNumber[positionOfElement].style.fontWeight = "bold";
     availableNotes[positionOfElement].style.color = "#1e40af";
     availableNotes[positionOfElement].style.fontWeight = "bold";
 }
 
-function unsetColor(){
-    for(let j=0; j<notesNumber.length; j++){
-    
+// to reset the color
+function unsetColor() {
+    for (let j = 0; j < notesNumber.length; j++) {
+
         notesNumber[j].style.color = "unset";
         notesNumber[j].style.fontWeight = "unset";
         availableNotes[j].style.color = "unset";
