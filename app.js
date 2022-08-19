@@ -8,6 +8,7 @@ const notesNumber = document.querySelectorAll(".notes");
 const availableNotes = document.querySelectorAll(".available-notes");
 const enableDisplayOne = document.querySelector(".cash-given");
 const enableDisplayTwo = document.querySelector(".table-container");
+const colorNotes = "#22c55e";
 
 
 let billTotal, cashReceived, balanceAmount;
@@ -53,7 +54,7 @@ function checkBillValidity() {
         setErrorMessage("Value should be greater than 0");
         cashReceived = 0;
         errorMessage.style.color = "red";
-        cashGiven.value = 0;
+        cashGiven.value = "";
         enableDisplayOne.style.display = "none";
         buttonNext.style.display = "block";
     }
@@ -83,9 +84,9 @@ function calculateChange(balance) {
 
 // To set the color
 function setColor(positionOfElement) {
-    notesNumber[positionOfElement].style.color = "#1e40af";
+    notesNumber[positionOfElement].style.color = colorNotes;
     notesNumber[positionOfElement].style.fontWeight = "bold";
-    availableNotes[positionOfElement].style.color = "#1e40af";
+    availableNotes[positionOfElement].style.color = colorNotes;
     availableNotes[positionOfElement].style.fontWeight = "bold";
 }
 
