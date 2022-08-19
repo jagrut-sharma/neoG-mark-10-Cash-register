@@ -39,6 +39,12 @@ body {
     width: 200px;
     margin: 0rem auto 1rem;
     text-align: center;
+    border-radius: 12px;
+    outline: 1px solid var(--hover-color);
+}
+
+.input:focus{
+    outline: 2px solid var(--primary-color);
 }
 
 .btn {
@@ -49,7 +55,7 @@ body {
     font-family: 'Mukta', sans-serif;
     border: 2px solid var(--primary-color);
     background-color: var(--background-color);
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
