@@ -54,7 +54,7 @@ body {
 }
 
 .btn:hover{
-    background-color: var(--hover-color);
+    background-color: var(--primary-color);
     color: var(--background-color);
     transition: 0.3s ease;
 }
