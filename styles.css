@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&display=swap');
-:root{
+
+:root {
     --primary-color: #6b21a8;
     --background-color: #f1f5f9;
     --hover-color: #9333ea;
@@ -17,7 +18,7 @@ body {
     background-color: var(--background-color);
 }
 
-.title{
+.title {
     color: var(--primary-color);
 }
 
@@ -43,7 +44,7 @@ body {
     outline: 1px solid var(--hover-color);
 }
 
-.input:focus{
+.input:focus {
     outline: 2px solid var(--primary-color);
 }
 
@@ -59,7 +60,7 @@ body {
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--primary-color);
     color: var(--background-color);
     transition: 0.3s ease;
@@ -101,7 +102,7 @@ td {
     text-align: center;
 }
 
-th{
+th {
     color: var(--primary-color);
     font-weight: bold;
 }
@@ -111,6 +112,10 @@ th{
     font-weight: 800;
     padding: 1rem;
     color: var(--primary-color);
+}
+
+.return-money {
+    color: #15803d;
 }
 
 .table-container {

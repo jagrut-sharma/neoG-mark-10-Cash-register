@@ -8,6 +8,7 @@ const notesNumber = document.querySelectorAll(".notes");
 const availableNotes = document.querySelectorAll(".available-notes");
 const enableDisplayOne = document.querySelector(".cash-given");
 const enableDisplayTwo = document.querySelector(".table-container");
+const returnMoney = document.querySelector(".return-money");
 const colorNotes = "#22c55e";
 
 
@@ -73,6 +74,7 @@ function calculateChange(balance) {
     errorImage.style.display = "none";
     unsetColor();
     enableDisplayTwo.style.display = "block";
+    returnMoney.innerText = balance;
 
     for (let i = 0; i < notesNumber.length; i++) {
         const division = Math.trunc(balance / notesValue[i]);
