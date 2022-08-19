@@ -27,6 +27,7 @@ buttonCheck.addEventListener("click",
         if (cashReceived === 0) {
             setErrorMessage("Value should be greater than 0");
             errorMessage.style.color = "red";
+            errorMessage.style.fontWeight = "bold";
             enableDisplayTwo.style.display = "none";
         } else if (cashReceived > billTotal) {
             balanceAmount = cashReceived - billTotal;
@@ -54,6 +55,7 @@ function checkBillValidity() {
         setErrorMessage("Value should be greater than 0");
         cashReceived = 0;
         errorMessage.style.color = "red";
+        errorMessage.style.fontWeight = "bold";
         cashGiven.value = "";
         enableDisplayOne.style.display = "none";
         buttonNext.style.display = "block";
