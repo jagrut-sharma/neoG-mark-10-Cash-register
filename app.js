@@ -22,7 +22,6 @@ buttonCheck.addEventListener("click",
         setErrorMessage("");
         cashReceived = parseFloat(cashGiven.value);
         checkBillValidity();
-        console.log(cashReceived);
 
         // If user directly enters -ve value in bill Amount
         if (cashReceived === 0) {
@@ -30,6 +29,7 @@ buttonCheck.addEventListener("click",
             errorMessage.style.color = "red";
             errorMessage.style.fontWeight = "bold";
             enableDisplayTwo.style.display = "none";
+            errorImage.style.display = "none";
         } else if (cashReceived > billTotal) {
             balanceAmount = cashReceived - billTotal;
             calculateChange(balanceAmount);
