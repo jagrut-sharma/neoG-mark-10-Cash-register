@@ -1,4 +1,4 @@
-# neoG-mark-10-Cash-register
+# Cash Register
 
 ## mark-10
 
