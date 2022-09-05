@@ -1,5 +1,7 @@
 # neoG-mark-10-Cash-register
 
+## mark-10
+
 A cash register app, that helps you tell how much change to return in min. no. of notes
 
 Made using Vanilla JS, HTML and CSS.
